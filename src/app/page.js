@@ -17,12 +17,17 @@ import web4 from "/public/web4.png"
 import web5 from "/public/web5.png"
 import web6 from "/public/web6.png"
 import {useState} from "react"
+import Link from "next/link";
 
 
 
 export default function Home() {
 
-  const [darkMode,setDarkMode]=useState(false);
+  const [darkMode,setDarkMode]=useState(true);
+  const [showDetail,setDetail]=useState(false);
+  function showDetails(){
+    setDetail(!showDetail);
+  }
 
   return (
         
@@ -48,7 +53,7 @@ export default function Home() {
                 }
                  className="cursor-pointer  text-2xl"/>
                 </li>
-              <li><a className="bg-gradient-to-r from  bg-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"href="#" >Resume</a></li>
+              <li><a className="bg-gradient-to-r from  bg-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"href="https://drive.google.com/file/d/14N5r1Taw1f8T-fjdOKqKr9sTYT1PeVBE/view?usp=sharing" >Resume</a></li>
             </ul>
           </nav>
 
@@ -60,16 +65,30 @@ export default function Home() {
               Developer and Desginer  
             </h3>
             <p className="text-md py-5 leading-8 dark:text-white text-gray-800 md:text-xl mx-w-lg mx-auto">
-              FreeLancer providing services for programming and needs.
-              join me down below and lets get cracking
+              Freelancer providing services for programming.
+              join me down below and lets get cracking 
+              
             </p>
            </div>
 
            <div className="text-5xl flex justify-center gap-16 text-gray-600">
-            <IoIosMail />
-            <AiFillLinkedin />
-            <FaGithub />
-           </div>
+
+            <button onClick={showDetails}>
+            <IoIosMail/>
+            </button>
+
+            <Link href="https://www.linkedin.com/in/shashwat-jain-0827a8251/">
+              <AiFillLinkedin/>
+            </Link>
+
+            <Link href="https://github.com/crash484">
+              <FaGithub></FaGithub>
+            </Link>
+
+            </div>
+            {showDetail && <div className="text-xs text-center pt-10"> my email is : jshashwat032@gmail.com</div>}
+
+           
 
            <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
             <Image src={deved} alt="a 3d image of me" layout="fill" objectFit="cover"/>
