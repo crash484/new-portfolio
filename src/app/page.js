@@ -139,8 +139,7 @@ export default function Home() {
           <div className="px-10">
             <h3 className="text-3xl py-1 text-teal-600">Portfolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
-            I offer from a wide range of services, including brand design,
-            building websites,API's...
+            I offer from a wide range of services, including brand design, building websites, API&apos;s...
             </p>
           </div>
 
