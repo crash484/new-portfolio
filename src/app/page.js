@@ -53,7 +53,9 @@ export default function Home() {
                 }
                  className="cursor-pointer  text-2xl"/>
                 </li>
-              <li><a className="bg-gradient-to-r from  bg-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"href="https://drive.google.com/file/d/14N5r1Taw1f8T-fjdOKqKr9sTYT1PeVBE/view?usp=sharing" >Resume</a></li>
+              <li><a className="bg-gradient-to-r from  bg-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+                   href="https://drive.google.com/file/d/1v0FC4qTiARVZOye3F5Hk5eOXqzoL4acg/view?usp=sharing" >
+                   Resume</a></li>
             </ul>
           </nav>
 
